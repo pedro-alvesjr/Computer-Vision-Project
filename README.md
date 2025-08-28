@@ -32,16 +32,24 @@ COMPUTER VISION PROJECT/
 
 Para cada imagem, são gerados:
 
-_original.png → Imagem original
-_bordas.png → Detecção de bordas (Canny)
-_threshold.png → Binarização com Otsu
-_mascara.png → Máscara binária do parafuso
-_parafuso_isolado.png → Parafuso isolado
+_transparente.png → Parafuso recortado com fundo transparente
+_recortado.png → Parafuso recortado com fundo preto
+_mascara.png → Máscara binária final do parafuso
 
-## Notas
+## Notas importantes
 
-- O algoritmo utiliza Canny para detecção de bordas e Otsu para binarização automática.
+O pipeline utiliza:
 
-- Caso a pasta resultados já contenha uma saída, o script não sobrescreve os arquivos.
+Conversão para escala de cinza e suavização com filtro bilateral.
 
-- A abordagem é baseada em técnicas clássicas de visão computacional, sem uso de redes neurais, garantindo execução simples em ambiente local.
+Binarização adaptativa (Adaptive Gaussian Threshold).
+
+Operações morfológicas para remover ruídos e preencher buracos internos.
+
+Extração da maior componente conectada (parafuso).
+
+Recorte e exportação com canal alfa (transparência).
+
+Caso a pasta resultados/ já exista, os arquivos podem ser sobrescritos.
+
+A abordagem é baseada em técnicas clássicas de visão computacional, sem uso de redes neurais, garantindo execução rápida e simples em qualquer máquina local.
