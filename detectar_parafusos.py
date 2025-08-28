@@ -45,8 +45,6 @@ for filename in os.listdir(input_folder):
 
     # --- Isolar e recortar o parafuso ---
     isolado = cv2.bitwise_and(img, img, mask=mask)
-    
-    # Criar imagem com fundo transparente
     isolado_rgba = cv2.cvtColor(isolado, cv2.COLOR_BGR2RGBA)
     isolado_rgba[:, :, 3] = mask  
 
