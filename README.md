@@ -8,7 +8,6 @@ Processar automaticamente um conjunto de imagens contendo um parafuso em fundo c
 ## Tecnologias utilizadas
 - [Python 3](https://www.python.org/)
 - [OpenCV](https://opencv.org/)
-- [NumPy](https://numpy.org/)
 
 ## Estrutura de pastas
 
@@ -22,7 +21,7 @@ COMPUTER VISION PROJECT/
 ## Como executar
 1. Clone este repositório ou baixe os arquivos.  
 2. Instale as dependências necessárias:
-    pip install opencv-python numpy
+    pip install opencv-python
 3. Coloque as imagens a serem processadas na pasta imagens/.
 4. Execute o script no terminal:
     python detectar_parafusos.py
