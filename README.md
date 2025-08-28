@@ -11,12 +11,11 @@ Processar automaticamente um conjunto de imagens contendo um parafuso em fundo c
 
 ## Estrutura de pastas
 
-COMPUTER VISION PROJECT/
-│
-├─ imagens/ # Conjunto de imagens originais (320 no dataset)
-├─ resultados/ # Resultados gerados automaticamente
-├─ detectar_parafusos.py # Script principal
-└─ README.md # Documentação do projeto
+- COMPUTER VISION PROJECT/
+    ├─ imagens/ # Conjunto de imagens originais (320 no dataset)
+    ├─ resultados/ # Resultados gerados automaticamente
+    ├─ detectar_parafusos.py # Script principal
+    └─ README.md # Documentação do projeto
 
 ## Como executar
 1. Clone este repositório ou baixe os arquivos.  
@@ -31,24 +30,24 @@ COMPUTER VISION PROJECT/
 
 Para cada imagem, são gerados:
 
-_transparente.png → Parafuso recortado com fundo transparente
-_recortado.png → Parafuso recortado com fundo preto
-_mascara.png → Máscara binária final do parafuso
+- _transparente.png → Parafuso recortado com fundo transparente
+- _recortado.png → Parafuso recortado com fundo preto
+- _mascara.png → Máscara binária final do parafuso
 
 ## Notas importantes
 
 O pipeline utiliza:
 
-Conversão para escala de cinza e suavização com filtro bilateral.
+- Conversão para escala de cinza e suavização com filtro bilateral.
 
-Binarização adaptativa (Adaptive Gaussian Threshold).
+- Binarização adaptativa (Adaptive Gaussian Threshold).
 
-Operações morfológicas para remover ruídos e preencher buracos internos.
+- Operações morfológicas para remover ruídos e preencher buracos internos.
 
-Extração da maior componente conectada (parafuso).
+- Extração da maior componente conectada (parafuso).
 
-Recorte e exportação com canal alfa (transparência).
+- Recorte e exportação com canal alfa (transparência).
 
-Caso a pasta resultados/ já exista, os arquivos podem ser sobrescritos.
+- Caso a pasta resultados/ já exista, os arquivos podem ser sobrescritos.
 
-A abordagem é baseada em técnicas clássicas de visão computacional, sem uso de redes neurais, garantindo execução rápida e simples em qualquer máquina local.
+- A abordagem é baseada em técnicas clássicas de visão computacional, sem uso de redes neurais, garantindo execução rápida e simples em qualquer máquina local.
