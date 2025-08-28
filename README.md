@@ -11,11 +11,13 @@ Processar automaticamente um conjunto de imagens contendo um parafuso em fundo c
 
 ## Estrutura de pastas
 
+```text
 COMPUTER VISION PROJECT/
-├─ imagens/                 # Conjunto de imagens originais (320 no dataset)
-├─ resultados/              # Resultados gerados automaticamente
-├─ detectar_parafusos.py    # Script principal
-└─ README.md                # Documentação do projeto
+├── imagens/                 # Conjunto de imagens originais (320 no dataset)
+├── resultados/              # Resultados gerados automaticamente
+├── detectar_parafusos.py    # Script principal
+└── README.md                # Documentação do projeto
+```
 
 ## Como executar
 1. Clone este repositório ou baixe os arquivos.  
