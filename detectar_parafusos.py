@@ -63,16 +63,16 @@ for filename in os.listdir(input_folder):
         # Recortar a versão normal para referência
         parafuso_recortado = isolado[y:y+h, x:x+w]
 
-        # --- Salvar APENAS as imagens essenciais ---
+        # --- Salvar as imagens essenciais ---
         base_name = os.path.splitext(filename)[0]
         
-        # 1. Imagem recortada com fundo transparente (MAIS IMPORTANTE)
+        # 1. Imagem recortada com fundo transparente
         cv2.imwrite(os.path.join(output_folder, f"{base_name}_transparente.png"), parafuso_transparente)
         
-        # 2. Imagem recortada normal (para visualização rápida)
+        # 2. Imagem recortada normal
         cv2.imwrite(os.path.join(output_folder, f"{base_name}_recortado.png"), parafuso_recortado)
         
-        # 3. Máscara final (opcional, para debug)
+        # 3. Máscara final
         cv2.imwrite(os.path.join(output_folder, f"{base_name}_mascara.png"), mask)
 
     print(f"Processado: {filename}")
